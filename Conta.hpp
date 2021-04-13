@@ -8,12 +8,14 @@
 
 class Conta{
 	
-public:
-	
+private:
 	static int conta_nun_decontas;
 	
+public:
+	static int recupera_conta_nun_decontas();
+	
 		
- private:
+private:
     std::string numero_conta;
     std::string cpf_titular;
     std::string nome_titular;
@@ -21,7 +23,8 @@ public:
 	
 public:
     Conta(std::string numero_conta, std::string cpf_titular, std::string nome_titular);
-    void sacar(float valorASacar);
+    ~Conta();
+	void sacar(float valorASacar);
     void depositar(float valorADepositar);
 	float recuperaSaldo()const;
 	void defineNome(std::string nome);
@@ -31,6 +34,10 @@ public:
 	std::string recuperaNome();
 	std::string recuperaNumero();
 	void ExibeSaldo(const Conta& conta);
+	
+private:
+	void verifica_tam_nome();
+	
 	
 	
 };

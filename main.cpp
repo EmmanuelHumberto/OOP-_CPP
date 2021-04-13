@@ -33,7 +33,7 @@ int main(){
 	cout << "	========================================"<< endl;
 	cout << "	NOME: " << conta_b.recuperaNome() << endl;
 	cout << "	========================================"<< endl;
-	cout << "	SALDO: " << conta_b.recuperaSaldo() << endl;
+				ExibeSaldo(conta_b);
 	cout << "	========================================"<< endl;	
 	cout << endl << endl;
 	cout << "	========================================"<< endl;
@@ -43,11 +43,11 @@ int main(){
 	cout << "	========================================"<< endl;
 	cout << "	NOME: " << conta_c.recuperaNome() << endl;
 	cout << "	========================================"<< endl;
-	cout << "	SALDO: " << conta_c.recuperaSaldo() << endl;
+				ExibeSaldo(conta_c);
 	cout << "	========================================"<< endl;
 	cout << endl << endl;
 	cout << "	========================================"<< endl;	
-	cout << "	NUMERO DE CONTAS: " << conta_c.conta_nun_decontas << endl;
+	cout << "	NUMERO DE CONTAS: " << Conta::recupera_conta_nun_decontas() << endl;
 	cout << "	========================================"<< endl;	
     return 0;
 }

@@ -15,10 +15,20 @@
 	 this->nome_titular = nome_titular;
 	 this->saldo = 0;
 	*/
-	
+	verifica_tam_nome();
 	//atributo de classe
 	conta_nun_decontas++;
- }
+  }
+ 
+ 
+ 
+ 
+  Conta::~Conta(){
+	  
+	  conta_nun_decontas--;
+  }
+  
+  
  
 void Conta::sacar(float valorASacar){ 
 		if (valorASacar < 0){
@@ -45,20 +55,6 @@ void Conta::depositar(float valorADepositar){
 		
 		}
 
-void Conta::defineNome(std::string nome){
-	nome_titular = nome;
-
-}
-
-void Conta::defineCpf(std::string cpf){
-			cpf_titular = cpf;
-	
-}
-void Conta::defineNumero(std::string numero){
-			numero_conta = numero;
-	
-}
-
  std::string Conta::recuperaCpf(){
 		return cpf_titular;
 } 
@@ -73,4 +69,17 @@ std::string Conta::recuperaNumero(){
 
 float Conta::recuperaSaldo()const{
 		return saldo;
+}
+
+int Conta::recupera_conta_nun_decontas(){
+	
+	return conta_nun_decontas;
+}
+
+void Conta::verifica_tam_nome(){
+	
+	if(nome_titular.size() < 5){
+		std::cout << "Nome muito curto." << std::endl;
+		exit(1);
+	 }
 }
