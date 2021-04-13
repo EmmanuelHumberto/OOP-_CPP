@@ -3,6 +3,8 @@
 #include <string>
 #include "Conta.hpp"
 
+ int Conta::conta_nun_decontas = 0;
+
 //lista de inicialização.
  Conta::Conta(std::string numero_conta, std::string cpf_titular, std::string nome_titular)
  : numero_conta(numero_conta),cpf_titular(cpf_titular), nome_titular(nome_titular), saldo(0)
@@ -13,6 +15,9 @@
 	 this->nome_titular = nome_titular;
 	 this->saldo = 0;
 	*/
+	
+	//atributo de classe
+	conta_nun_decontas++;
  }
  
 void Conta::sacar(float valorASacar){ 

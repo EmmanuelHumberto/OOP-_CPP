@@ -8,6 +8,11 @@
 
 class Conta{
 	
+public:
+	
+	static int conta_nun_decontas;
+	
+		
  private:
     std::string numero_conta;
     std::string cpf_titular;
