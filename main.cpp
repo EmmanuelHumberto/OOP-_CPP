@@ -15,10 +15,8 @@ int main(){
     contab.depositar(500);
     contab.sacar(200);
 
-	cout << "Saldo - Conta - a: " << contaa.recuperaSaldo() << endl;
-	cout << "Saldo - Conta - a: " << contaa.recuperaNome() << endl;
-	
-	
+	cout << "Saldo Conta - a: " << contaa.recuperaSaldo() << endl;
+		
 	
     return 0;
 }

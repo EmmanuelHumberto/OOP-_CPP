@@ -31,9 +31,3 @@ void Conta::defineNome(std::string nome){
 		 nome = nome;
 	
 }
-char Conta::recuperaNome(){
-		return nome;
-	
-}
-
-

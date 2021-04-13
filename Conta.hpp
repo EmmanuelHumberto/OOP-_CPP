@@ -19,7 +19,5 @@ class Conta{
     void depositar(float valorADepositar);
 	float recuperaSaldo();
 	void defineNome(std::string nome);
-	char recuperaNome();
-	
 	
 };
