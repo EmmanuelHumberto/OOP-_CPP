@@ -9,9 +9,9 @@
 class Conta{
 	
  private:
-    std::string numero;
-    std::string cpf;
-    std::string nome;
+    std::string numero_conta;
+    std::string cpf_titular;
+    std::string nome_titular;
     float saldo = 0;
 	
   public:
@@ -19,5 +19,10 @@ class Conta{
     void depositar(float valorADepositar);
 	float recuperaSaldo();
 	void defineNome(std::string nome);
+	void defineCpf(std::string cpf);
+	void defineNumero(std::string numero);
+	std::string recuperaCpf();
+	std::string recuperaNome();
+	std::string recuperaNumero();
 	
 };
