@@ -1,43 +1,31 @@
-/*Diretiva de compilação não standard
-  Serve para fazer com que o ficheiro atual 
-	apenas seja incluído uma vez durante o processo de compilação.
+/*Diretiva de compilação não standard  Serve para fazer com que 
+	o ficheiro atual apenas seja incluído uma vez durante o processo de compilação.
 */
 #pragma once
 #include <string>
-
+#include "titular.hpp"
+#include "cpf.hpp"
 
 class Conta{
 	
+	private:
+		static int conta_nun_decontas;
+	
+	public:
+		static int recupera_conta_nun_decontas();
+			
 private:
-	static int conta_nun_decontas;
+		Cpf cpf;
+		std::string numero;
+		Titular titular;
+		float saldo;
 	
-public:
-	static int recupera_conta_nun_decontas();
-	
+	public:
+		Conta(Cpf cpf, std::string numero, Titular titular);
+		~Conta();
+		void sacar(float valorASacar);
+		void depositar(float valorADepositar);
+		float recuperaSaldo()const;
+		std::string recuperaNumero();
 		
-private:
-    std::string numero_conta;
-    std::string cpf_titular;
-    std::string nome_titular;
-    float saldo = 0;
-	
-public:
-    Conta(std::string numero_conta, std::string cpf_titular, std::string nome_titular);
-    ~Conta();
-	void sacar(float valorASacar);
-    void depositar(float valorADepositar);
-	float recuperaSaldo()const;
-	void defineNome(std::string nome);
-	void defineCpf(std::string cpf);	
-	void defineNumero(std::string numero);
-	std::string recuperaCpf();
-	std::string recuperaNome();
-	std::string recuperaNumero();
-	void ExibeSaldo(const Conta& conta);
-	
-private:
-	void verifica_tam_nome();
-	
-	
-	
-};
+};	
