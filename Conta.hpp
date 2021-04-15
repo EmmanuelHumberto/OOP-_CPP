@@ -15,13 +15,12 @@ class Conta{
 		static int recupera_conta_nun_decontas();
 			
 private:
-		Cpf cpf;
 		std::string numero;
 		Titular titular;
 		float saldo;
 	
 	public:
-		Conta(Cpf cpf, std::string numero, Titular titular);
+		Conta(std::string numero, Titular titular);
 		~Conta();
 		void sacar(float valorASacar);
 		void depositar(float valorADepositar);

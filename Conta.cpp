@@ -6,9 +6,8 @@
 int Conta::conta_nun_decontas = 0;
 
 	//lista de inicialização.
-	Conta::Conta(Cpf cpf, std::string numero, Titular titular):
+	Conta::Conta(std::string numero, Titular titular):
 	 
-	 cpf(cpf),
 	 numero(numero),
 	 titular(titular),
 	 saldo(0)
@@ -33,14 +32,18 @@ void Conta::sacar(float valorASacar){
 		std::cout << "Não pode sacar valor negativo." << std::endl;
 		return;
 	 }
+	 
+	 
+	 float tarifaSaque = valorASacar * 0.05;
+	 float valorSaque = valorASacar + tarifaSaque;
 
-	if (valorASacar > saldo){
+	if (valorSaque > saldo){
 	std::cout << "Saldo insuficiente." << std::endl;
 	return;
 
 	 }
 
-	saldo -= valorASacar;
+	saldo -= valorSaque;
 	
  }
  

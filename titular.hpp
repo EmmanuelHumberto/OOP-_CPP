@@ -1,21 +1,15 @@
 #pragma once
 #include <string>
+#include "pessoa.hpp"
+#include "cpf.hpp"
 
 	
-class Titular{
+class Titular: public Pessoa
 
-private:
-
-	std::string nome;
+{
 	
-public:
-	Titular(std::string nome);
-	std::string recuperaTitular();
-
-	
-private:
-	void verifica_tam_nome();
-
+	public:
+	Titular(Cpf cpf, std::string nome);
 };
 	
 

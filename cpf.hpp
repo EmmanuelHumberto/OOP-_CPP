@@ -6,12 +6,12 @@
 class Cpf{
 
 private:
-	std::string cpf;
+	std::string numero;
 	
 	
 public:
-	Cpf(std::string cpf);
-	std::string recuperaCpf();
+	explicit Cpf(std::string numero);
+    std::string recuperaNumero() const;
 
 	
 

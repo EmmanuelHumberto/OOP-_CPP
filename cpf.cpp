@@ -1,13 +1,13 @@
 #include <iostream>
 #include "cpf.hpp"
 
-Cpf::Cpf(std::string cpf): cpf(cpf)
+Cpf::Cpf(std::string numero): numero(numero)
 
 {
-	//validação cpf
+	std::cout << "Cpf criado" << std::endl;
 }
 
-std::string Cpf::recuperaCpf(){
-	
-	return cpf;
+std::string Cpf::recuperaNumero() const
+{
+    return numero;
 }
