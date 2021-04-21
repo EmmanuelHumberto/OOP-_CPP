@@ -4,7 +4,7 @@
 int Conta::conta_nun_decontas = 0;
 
 /*-------------------------------------------------------------
-* CONTA O NUM. DE CONTAS*/
+* CONSTRUTOR CONTAS*/
 Conta::Conta(std::string numero, Titular titular)://lista de inicialização.
  
 numero(numero),
