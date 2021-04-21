@@ -1,23 +1,23 @@
 #include "Conta.hpp"
 #include <iostream>
 
-//=======================================================
-
 int Conta::conta_nun_decontas = 0;
 
-	//lista de inicialização.
-	Conta::Conta(std::string numero, Titular titular):
-	 
-	 numero(numero),
-	 titular(titular),
-	 saldo(0)
-	 
-	 { 
-		//atributo de classe
-		conta_nun_decontas++;
- }
+/*-------------------------------------------------------------
+* CONTA O NUM. DE CONTAS*/
+Conta::Conta(std::string numero, Titular titular)://lista de inicialização.
+ 
+numero(numero),
+titular(titular),
+saldo(0)
+ 
+ { 
+	//atributo de classe
+	conta_nun_decontas++;
+}
 
- //=======================================================
+/*-------------------------------------------------------------
+ *Construtor de Conta */
  
 Conta::~Conta(){
 	  
@@ -25,8 +25,12 @@ Conta::~Conta(){
 
  }
   
- //=========================================================  
+/*-------------------------------------------------------------
+ * SACAR*/
+ 
 void Conta::sacar(float valorASacar){ 
+	
+	std::cout << "Chamando o metodo sacar da conta Corrente" << std::endl;
 
 	if (valorASacar < 0){
 		std::cout << "Não pode sacar valor negativo." << std::endl;
@@ -47,7 +51,8 @@ void Conta::sacar(float valorASacar){
 	
  }
  
-//============================================================
+/*-------------------------------------------------------------
+ * DEPOSITAR*/
 
 void Conta::depositar(float valorADepositar){
 	
@@ -61,21 +66,24 @@ void Conta::depositar(float valorADepositar){
 
  }
  
-//==============================================================
+/*-------------------------------------------------------------
+ * RECUPERA NUMERO*/
 
 std::string Conta::recuperaNumero(){
 	
 	return numero;
 } 
 
-//================================================================
+/*-------------------------------------------------------------
+ * RECUPERA NUMERO DE CONTAS*/
 
 int Conta::recupera_conta_nun_decontas(){
 	
 	return conta_nun_decontas;
 }
 
-//=================================================================
+/*-------------------------------------------------------------
+ * RECUPERA SALDO*/
 
 float Conta::recuperaSaldo() const
 {

@@ -4,23 +4,36 @@
 #include "titular.hpp"
 #include "cpf.hpp"
 #include "funcionarios.hpp"
+#include "ContaPoupanca.hpp"
+/*------------------------------------------*/
 
 using namespace std;
-
+/*------------------------------------------
+ * EXIBE SALDO*/
 void ExibeSaldo(const Conta& conta)
+
 {
     cout << "O saldo da conta é: " << conta.recuperaSaldo() << endl;
 }
+/*------------------------------------------
+ * REALIZA SAQUE*/
+void RealizaSaque(Conta& conta)
+
+{
+	conta.sacar(200);
+}
+/*------------------------------------------
+ * MAIN*/
 
 int main()
 {
-    Titular titular(Cpf("123.456.789-10"), "Vinicius");
-	Conta umaConta("123456", titular);
+    Titular titular(Cpf("123.456.789-10"), "Riobaldo");
+	ContaPoupanca umaConta("123456", titular);
     umaConta.depositar(500);
-    umaConta.sacar(200);
+    RealizaSaque(umaConta);
     ExibeSaldo(umaConta);
 
-    Titular outro(Cpf("098.765.432-10"), "Vinicius Dias");
+    Titular outro(Cpf("098.765.432-10"),"Demostenes");
     Conta umaOutraConta("654321", titular);
     umaOutraConta.depositar(300);
     umaOutraConta.sacar(50);

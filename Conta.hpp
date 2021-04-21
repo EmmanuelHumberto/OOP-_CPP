@@ -1,6 +1,3 @@
-/*Diretiva de compilação não standard  Serve para fazer com que 
-	o ficheiro atual apenas seja incluído uma vez durante o processo de compilação.
-*/
 #pragma once
 #include <string>
 #include "titular.hpp"
@@ -8,23 +5,39 @@
 
 class Conta{
 	
-	private:
-		static int conta_nun_decontas;
-	
-	public:
-		static int recupera_conta_nun_decontas();
-			
 private:
-		std::string numero;
-		Titular titular;
-		float saldo;
+	static int conta_nun_decontas;
+/*-------------------------------------------------------------*/	
+	
+public:
+	static int recupera_conta_nun_decontas();
+/*-------------------------------------------------------------*/			
+
+private:
+	std::string numero;
+	Titular titular;
+/*-------------------------------------------------------------*/
+
+		
+protected:
+	float saldo;
+/*-------------------------------------------------------------*/	
 	
 	public:
-		Conta(std::string numero, Titular titular);
-		~Conta();
-		void sacar(float valorASacar);
-		void depositar(float valorADepositar);
-		float recuperaSaldo()const;
-		std::string recuperaNumero();
+	Conta(std::string numero, Titular titular);
+	~Conta();
 		
+	 /*Uma função virtual é uma função de membro que é declarada 
+	 * dentro de uma classe base e é redefinida (Substituída) por 
+	 * uma classe derivada. Quando você se refere a um objeto de classe 
+	 * derivada usando um ponteiro ou uma referência à classe base,
+	 * pode chamar uma função virtual para esse objeto e executar 
+	 * a versão da função da classe derivada.
+	 */
+	virtual void sacar(float valorASacar);
+	
+	void depositar(float valorADepositar);
+	float recuperaSaldo()const;
+	std::string recuperaNumero();
+/*-------------------------------------------------------------*/		
 };	
