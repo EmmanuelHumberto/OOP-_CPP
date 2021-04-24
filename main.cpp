@@ -7,6 +7,8 @@
 #include "Poupanca.hpp"
 #include "ContaCorrente.hpp"
 #include "Pessoa.hpp"
+#include "Gerente.hpp"
+
 /*------------------------------------------*/
 
 using namespace std;
@@ -63,8 +65,8 @@ int main()
 
 
     cout << "Número de contas: " << Conta::recupera_conta_nun_decontas() << endl;
-    Funcionarios gerente(Cpf("123.456.789-10"), "Juca Pirama", 15000);
-	cout << "Nome do funcionário: " << gerente.recuperaNome() << endl;
+    //Funcionarios gerente(Cpf("123.456.789-10"), "Juca Pirama", 15000);
+	//cout << "Nome do funcionário: " << gerente.recuperaNome() << endl;
 
     return 0;
 }

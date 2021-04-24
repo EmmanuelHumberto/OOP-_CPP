@@ -4,7 +4,7 @@
 #include "Pessoa.hpp"
 
 
-class Funcionarios:public Pessoa
+class Funcionarios: public Pessoa
 {
 
 private:
@@ -13,6 +13,9 @@ private:
 
 public:
 	Funcionarios(Cpf cpf, std::string nome, float salario);
-	std::string recuperaNome();
+	std::string recuperaNome()const;
+	virtual float bonificacao()const = 0;
+	float recuperaSalario() const;
+
 /*------------------------------------------*/
 };

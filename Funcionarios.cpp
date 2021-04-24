@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Funcionarios.hpp"
 
 /*------------------------------------------
@@ -11,8 +12,13 @@ Funcionarios::Funcionarios(Cpf cpf, std::string nome, float salario)
 
 /*------------------------------------------
  * RECUPERA NOME*/
-std::string Funcionarios::recuperaNome()
-{
+std::string Funcionarios::recuperaNome()const{
 
 return nome;
+}
+/*------------------------------------------
+ * RECUPERA SALARIO*/
+float Funcionarios::recuperaSalario()const{
+
+	return salario;
 }

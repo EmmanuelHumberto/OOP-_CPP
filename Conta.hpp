@@ -43,7 +43,7 @@ public:
 	 */
 	virtual float taxaSaque() const = 0;
 
-		void depositar(float valorADepositar);
+	void depositar(float valorADepositar);
 	float recuperaSaldo()const;
 	std::string recuperaNumero();
 /*-------------------------------------------------------------*/
